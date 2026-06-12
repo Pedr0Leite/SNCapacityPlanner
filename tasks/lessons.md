@@ -15,3 +15,9 @@ Corrections and lessons learned during the build, appended per phase (spec §16)
 - **MCP `delete_record` reports `Expecting value: line 1 column 1` on success** — that error is the client mis-parsing an empty 204 No Content body; the delete actually succeeded (verify with a follow-up query). Same for `sys_db_object.attributes` no-op PATCH returning success.
 - **Socket-closed errors on `create_record` mean the write did NOT land** — re-query by natural key before retrying to avoid duplicates (happened twice: team.name, project insert).
 
+## Phase 4
+- **`sys_security_acl` is 403 on REST write** (same cross-scope system-table protection as sys_dictionary/sys_index). All ACL creation must go to the operator UI checklist (MANUAL_STEPS.md §3). Did not spin — stopped after the first 4 failed creates, recorded, moved on.
+- **"Create access controls" generated NO default ACLs** for these scoped tables — verified 0 capplan rows in `sys_security_acl` before building. So Phase 4 is a clean create of 21 ACLs, not an edit-the-defaults exercise; there is no leftover empty-role ACL granting broad access to worry about.
+- **ACL operation sys_ids are literal strings** (`read`/`create`/`write`/`delete`) — `sys_security_operation.sys_id == name` for the four CRUD ops (unlike `report_view` which is hashed). Handy for scripted ACL creation.
+- **ACL `name` field stores the table name** (e.g. `x_335329_capplan_project`), or `<table>.<field>` for field ACLs; `type=record`, `operation` is a reference. Query existing ACLs with `nameLIKE<scope>`.
+

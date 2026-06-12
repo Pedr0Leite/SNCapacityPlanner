@@ -166,3 +166,47 @@ Tooling: MCP `servicenow-sse` synchronous REST Table API. All metadata auto-scop
 - T03/T04 already exercisable: fte<0, fte>30, duplicate insert all abort (BR-01); fte=0 update
   aborts (BR-02); headcount fte>999 and duplicate abort (BR-03). After indexes are added,
   add an ATF asserting the DB-level unique constraint as defense-in-depth.
+
+---
+
+## Phase 4 — Security / ACL matrix (§8.2)
+
+Tooling: MCP `servicenow-sse` synchronous REST. Scope verified `x_335329_capplan` (active_scope).
+
+### Pre-check
+- Queried `sys_security_acl` for capplan ACLs (`nameLIKEx_335329_capplan`, also explicit IN of 5
+  tables): **0 found**. The table "Create access controls" option did NOT generate any default
+  ACLs for these scoped tables. => Phase 4 is a clean create of all 21 ACLs (no defaults to edit,
+  no leftover empty-role ACL to neutralize).
+- Roles present: `.user` a3f2cab747510f10654c57f1d16d4328 · `.planner` f7f2cab747510f10654c57f1d16d4395
+  · `.admin` 23b28e7747510f10654c57f1d16d43d3.
+- Operation sys_ids are literal: read / create / write / delete.
+
+### Intended ACL set (per §8.2 matrix) — 21 total
+- area/team/project/headcount: read=.user, create/write/delete=.admin (16 ACLs)
+- allocation: read=.user, create/write/delete=.planner (4 ACLs)
+- FIELD ACL: `x_335329_capplan_project.comments` write=.planner (1 ACL)
+- Record-type, role-based, no scripts. Admin satisfies planner/user-gated ACLs via role
+  containment (admin ⊃ planner ⊃ user) — no admin-override scripts added.
+
+### Status: BLOCKED — pushed to operator (MANUAL_STEPS.md §3)
+- Type: Access Control (sys_security_acl + sys_security_acl_role)
+- Scope: x_335329_capplan
+- Status: FAILED via REST → DEFERRED to operator UI
+- Notes: `create_record` on `sys_security_acl` returns **HTTP 403 Forbidden** (cross-scope
+  system-table protection, same as sys_dictionary/sys_index in Phase 3). Stopped after the first
+  4 failed creates (area read/create/write/delete), did NOT retry/spin. Full 21-row operator
+  checklist with Type/Operation/Name/Requires-role + field-ACL instructions written to
+  tasks/MANUAL_STEPS.md §3, including operation/role sys_ids for an optional admin-run fix script.
+- Built at: 2026-06-12
+
+### Verification
+- Pre-state verified (0 existing ACLs). Post-creation verification (21 ACLs + role grants) and
+  runtime impersonation (T05/T06) DEFERRED — the latter to Phase 8 ATF per instructions. Operator
+  creates the ACLs in UI, then the verification queries in MANUAL_STEPS.md §3 confirm.
+
+### ATF test suggestions (Phase 8)
+- T05: impersonate .user-only → reads OK, any insert fails (GlideRecordSecure).
+- T06: impersonate .planner → allocation CRUD OK; project create/write fails; BUT project.comments
+  write succeeds (field ACL); team/area/headcount create fails.
+- Admin: full CRUD on all 5 tables via containment.
