@@ -66,3 +66,103 @@ Tooling: MCP `servicenow-sse` (REST Table API, synchronous). Instance dev295018.
   Plan: verify BRs via synchronous REST inserts that trigger the BR and check the HTTP error,
   or via ATF (Phase 8) which runs through the transaction engine.
 - `apps.current_app` preference left = app scope so Phase 3-7 metadata auto-scopes correctly.
+
+---
+
+# Phase 3 — Data model (5 tables, choices, indexes, business rules)
+
+Tooling: MCP `servicenow-sse` synchronous REST Table API. All metadata auto-scoped to
+`x_335329_capplan` (sys_scope e0a1423347510f10654c57f1d16d43f1) via the pinned
+`apps.current_app` preference; verified on first table (area) before proceeding. Built 2026-06-12 ~17:43-17:51 UTC.
+
+## Tables (sys_db_object, all scope = x_335329_capplan)
+| Table | sys_id | Custom cols | Display | Auditing |
+|---|---|---|---|---|
+| x_335329_capplan_area | 27a3c63b47510f10654c57f1d16d4333 | 6 | name | n/a |
+| x_335329_capplan_team | 83b3ca3b47510f10654c57f1d16d4311 | 3 | name | n/a |
+| x_335329_capplan_project | a3b3ca3b47510f10654c57f1d16d434e | 15 | name | REQUIRED — NOT SET (blocker, see below) |
+| x_335329_capplan_headcount | bbb3ca3b47510f10654c57f1d16d43b0 | 4 | (team) | n/a |
+| x_335329_capplan_allocation | 10c30e3b47510f10654c57f1d16d4313 | 5 | (project) | REQUIRED — NOT SET (blocker, see below) |
+
+- Status: BUILT. Created sys_db_object via REST; ServiceNow auto-generated the Collection row
+  + 6 system fields per table. `create_access_controls=true` set on each (note: this does NOT
+  actually generate ACLs on a raw REST insert — 0 ACLs exist; Phase 4 must create them anyway).
+- All 33 custom columns verified in sys_dictionary: correct internal_type, max_length, mandatory,
+  display, default_value, references and cascade rules. Key attributes:
+  - project.name: String 255, mandatory, display, unique=false (per spec).
+  - project.area: Reference -> area, mandatory.
+  - allocation.project: Reference -> project, mandatory, cascade rule = **Cascade**.
+  - allocation.team: Reference -> team, mandatory, cascade rule = **Restrict**.
+  - headcount.team: Reference -> team, mandatory, cascade rule = **Restrict**.
+  - month (headcount + allocation): Integer, mandatory, choice = "Dropdown without --None--".
+  - priority/snow_status/ado_status/type/t_shirt_size: String, choice = "Dropdown with --None--".
+  - active (area/team/project): True/False, default_value=true.
+  - fte: Decimal (allocation mandatory; headcount optional per spec ">=0" vs ">0").
+
+## Choice lists (sys_choice, scope = app) — 47 rows total, all verified value/label/sequence
+- project.priority (5): 0=P0 BAU, 1=P1 High, 2=P2 Medium, 3=P3 Low, 4=P4
+- project.snow_status (7), SS_ORDER sequence: approved, screening, qualified, pending, new, completed, canceled
+- project.ado_status (4): new, in_progress, done, on_hold
+- project.type (2): project, bau
+- project.t_shirt_size (5): XS, S, M, L, XL (label=value)
+- headcount.month (12): 1..12 = Jan..Dec
+- allocation.month (12): 1..12 = Jan..Dec
+
+## Business Rules (sys_script, scope = app, ES2021 const/let, advanced, no current.update())
+| BR | Table | When | insert/update | order | sys_id |
+|---|---|---|---|---|---|
+| BR-01 Validate and normalize allocation | allocation | before | ins+upd | 100 | 87d44afb47510f10654c57f1d16d43a5 |
+| BR-02 Zero implies delete | allocation | before | upd only | 110 | 11e40efb47510f10654c57f1d16d43e3 |
+| BR-03 Validate headcount | headcount | before | ins+upd | 100 | f3e48efb47510f10654c57f1d16d43c3 |
+- BR-01: cap from property max_fte_per_cell (=30); abort if fte<0 or >cap; round to 2dp via
+  Math.round(x*100)/100; insert-only duplicate guard on (project,team,year,month) via single
+  GlideRecord setLimit(1).
+- BR-02: if fte===0 -> addErrorMessage("Use delete...") + setAbortAction(true).
+- BR-03: 0<=fte<=999; round 2dp; insert-only duplicate guard on (team,year,month).
+- GOTCHA: `create_business_rule` MCP tool created all 3 with action_insert=action_update=FALSE
+  (BRs would never fire). Fixed via PATCH on sys_script setting the correct action flags.
+
+## DB indexes (§6.4/§6.5) — NOT CREATED (blocker, see below)
+- Required: headcount UNIQUE(team,year,month); allocation UNIQUE(project,team,year,month);
+  allocation non-unique(team,year); allocation non-unique(year).
+
+## Verification results (synchronous REST)
+- 5 tables exist in scope with correct names/labels. PASS
+- 33 custom columns match spec (names, types, mandatory, reference, cascade, choice, display, defaults). PASS
+- 47 sys_choice rows match spec exactly. PASS
+- BR functional test (created ZZ_TEST area/team/project as valid refs):
+  - INSERT allocation fte=2.5 (2026,m1)  -> 201 SUCCESS (baseline valid insert)
+  - INSERT allocation fte=-1  (2026,m1)  -> **HTTP 403** (BR-01 range abort)  PASS
+  - INSERT allocation fte=3   (2026,m1 DUP) -> **HTTP 403** (BR-01 duplicate guard abort)  PASS
+  - INSERT allocation fte=1.5 (2026,m2)  -> 201 SUCCESS (proves 403s are BR aborts, not ACL)
+  - INSERT allocation fte=1.555 (2026,m3) -> stored as **1.56** (BR-01 2dp rounding)  PASS
+  - NOTE: scoped before-BR setAbortAction(true) surfaces as HTTP 403 Forbidden through the
+    Table API (the abort is reported as access-denied). Confirmed it is a BR abort and not an
+    ACL block because two other valid inserts on the same table succeeded.
+- All test rows (3 allocations + project + team + area) DELETED. All 5 tables confirmed EMPTY
+  for Phase 6 seeding. PASS
+
+## BLOCKERS — require manual UI action (cannot be done via REST or script on this PDI)
+1. **Auditing on project + allocation NOT enabled.** The "Auditing" toggle writes
+   `update_synch=true` to the table's attributes. Could not set it: PATCH to
+   `sys_db_object.attributes` reports success but is silently ignored (sys_mod_count stays 0,
+   field reads back empty); the Collection dictionary row (where the attribute also lives) is
+   403-protected via Table API; and script-based toggle is impossible (sys_trigger jobs never
+   claimed). MANUAL FIX: in the platform UI, open each table (project, allocation) ->
+   Table definition -> check "Audit" (Controls section / or set attributes update_synch=true).
+2. **4 DB indexes NOT created.** `sys_index` is not writable via Table API (403 on both read
+   and write); index creation otherwise needs a server-side index-manager script, but
+   sys_trigger jobs are not claimed on this PDI. MANUAL FIX (Table -> Database Indexes -> New):
+   - headcount: UNIQUE on team, year, month
+   - allocation: UNIQUE on project, team, year, month
+   - allocation: non-unique on team, year
+   - allocation: non-unique on year
+   MITIGATION: functional uniqueness for the two unique indexes is already enforced at the
+   application layer by BR-01 (allocation) and BR-03 (headcount) duplicate guards, exactly as
+   the spec intended ("BR gives a clean gs.addErrorMessage; index alone aborts ugly"). The
+   indexes remain needed for performance and as a hard DB-level constraint.
+
+## ATF test suggestions (for Phase 8)
+- T03/T04 already exercisable: fte<0, fte>30, duplicate insert all abort (BR-01); fte=0 update
+  aborts (BR-02); headcount fte>999 and duplicate abort (BR-03). After indexes are added,
+  add an ATF asserting the DB-level unique constraint as defense-in-depth.
