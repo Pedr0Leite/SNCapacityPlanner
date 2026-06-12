@@ -93,3 +93,108 @@ Do NOT set Admin overrides scripts; rely on role containment
   exactly the role from the matrix above.
 - Runtime impersonation (T05 .user read-only / T06 .planner allocation CRUD)
   is DEFERRED to Phase 8 ATF — do not attempt impersonation via REST.
+
+## 4. Phase 6 — run the seed  (spec §12)
+
+**Why this is a manual UI step:** the ad-hoc background/fix-script scheduler does
+NOT execute on this PDI (`sys_trigger` jobs are never claimed — confirmed 5×), so
+the seed cannot be triggered via MCP `execute_background_script` / `run_fix_script`.
+**Scripts - Background runs synchronously in the operator's own session**, so the
+whole load completes inline and prints its summary. That is the supported path here.
+
+Pre-loaded already (via MCP REST, idempotent — do not redo): the **10 areas** and
+**10 teams** exist. The seed run below re-checks them (upserts, 0 dupes) and then
+loads the **99 projects, 779 allocations, 120 headcount rows**.
+
+### 4a. Attach the dataset to the seed Script Include (one-time, UI)
+The runner reads the JSON from an attachment on its own script-include record
+(no scheduler, no 132 KB paste).
+
+1. Navigate to **System Definition → Script Includes →** `CapacityPlannerSeedData`
+   (sys_id `01e1e23f47550f10654c57f1d16d4343`).
+2. Use the **paperclip (Manage Attachments)** in the form header → **Choose / drag**
+   the repo file **`seed/seed_2026.json`** (from
+   `…\SNCapacityPlanner\seed\seed_2026.json`). Keep the file name **`seed_2026.json`**.
+3. Confirm the attachment shows on the record.
+
+> Note: this attach step is UI-only because (a) the MCP toolset exposes no
+> attachment-upload tool and (b) no direct PDI Attachment-API credentials are
+> available to this agent. The file content is authoritative and version-controlled
+> in the repo.
+
+### 4b. Run the seed — Scripts - Background (scope = Capacity Planner)
+Open **System Definition → Scripts - Background**. At the top, set
+**"Run script in scope" = Capacity Planner (`x_335329_capplan`)**. Paste and run:
+
+```javascript
+// Capacity Planner — Phase 6 seed. Synchronous; ~1,700 upserts. Idempotent.
+var seeder = new x_335329_capplan.CapacityPlannerSeedData();
+var result = seeder.loadFromAttachment('seed_2026.json', 2026);
+gs.info('SEED RESULT: ' + JSON.stringify(result));
+```
+
+Expect in the output / system log a summary line like:
+
+```
+[CapacityPlannerSeedData] Summary (ok=true): x_335329_capplan_area{c:0,u:10,s:0}
+  x_335329_capplan_team{c:0,u:10,s:0} x_335329_capplan_project{c:99,u:0,s:0}
+  x_335329_capplan_allocation{c:779,u:0,s:0} x_335329_capplan_headcount{c:120,u:0,s:0}
+```
+
+(areas/teams show `u:10` because they were pre-loaded; projects/allocations/headcount
+show `c:` on first run. A second run shows everything as `u:` — idempotent, 0 dupes.)
+
+#### Inline fallback (only if attaching is not possible)
+`loadFromAttachment` is just a thin wrapper over `load(jsonStringOrObject, year)`.
+If you cannot attach the file, open `seed/seed_2026.json`, copy its entire contents,
+and run instead:
+
+```javascript
+var SEED = /* paste the full contents of seed_2026.json here */ ;
+var seeder = new x_335329_capplan.CapacityPlannerSeedData();
+gs.info('SEED RESULT: ' + JSON.stringify(seeder.load(SEED, 2026)));
+```
+
+### 4c. §12.3 verification queries (run after the seed, scope = Capacity Planner)
+Paste into Scripts - Background and confirm against the JSON reconciliation totals
+in `seed/seed_log.md` (projects **99**, allocation FTE sum **386.75**,
+headcount FTE sum **438**).
+
+```javascript
+// §12.3 reconciliation
+var YR = 2026;
+
+// 1) total projects == JSON count (99)
+var gp = new GlideAggregate('x_335329_capplan_project');
+gp.addAggregate('COUNT'); gp.query(); gp.next();
+gs.info('projects = ' + gp.getAggregate('COUNT') + ' (expect 99)');
+
+// 2) SUM(allocation.fte WHERE year=2026) within 0.01 of 386.75
+var ga = new GlideAggregate('x_335329_capplan_allocation');
+ga.addQuery('year', YR);
+ga.addAggregate('SUM', 'fte'); ga.query(); ga.next();
+gs.info('allocation fte sum = ' + ga.getAggregate('SUM', 'fte') + ' (expect 386.75 +/- 0.01)');
+
+// 3) headcount sum (expect 438) + per-team January allocation spot-check
+var gh = new GlideAggregate('x_335329_capplan_headcount');
+gh.addQuery('year', YR);
+gh.addAggregate('SUM', 'fte'); gh.query(); gh.next();
+gs.info('headcount fte sum = ' + gh.getAggregate('SUM', 'fte') + ' (expect 438)');
+
+// per-team January (month=1) allocation totals — compare to seed_log.md table
+var gj = new GlideAggregate('x_335329_capplan_allocation');
+gj.addQuery('year', YR);
+gj.addQuery('month', 1);
+gj.addAggregate('SUM', 'fte');
+gj.groupBy('team');
+gj.query();
+while (gj.next()) {
+  gs.info('Jan ' + gj.team.getDisplayValue() + ' = ' + gj.getAggregate('SUM', 'fte'));
+}
+// Expected Jan totals: SALES 9.2, Architecture 1.75, WEB 0.95, AI Engineering 0.6,
+// BA-BusinessAnalyst 5.45, ERP 3.5, Integrations 1.3, Internal Apps 0.7,
+// Service Now 5.75, PM 2.2
+```
+
+PASS criteria: projects == 99; allocation FTE sum within 0.01 of 386.75;
+headcount sum == 438; per-team Jan totals match the seed_log.md table.

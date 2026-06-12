@@ -1,0 +1,6492 @@
+{
+  "areas": [
+    {
+      "name": "CCO",
+      "color": "#3d8fd4",
+      "badge_bg": "#dde8f8",
+      "badge_fg": "#0c3461",
+      "order": 10
+    },
+    {
+      "name": "Sales",
+      "color": "#27ae60",
+      "badge_bg": "#d2f5e3",
+      "badge_fg": "#065f46",
+      "order": 20
+    },
+    {
+      "name": "Finance",
+      "color": "#f39c12",
+      "badge_bg": "#fef3c7",
+      "badge_fg": "#78350f",
+      "order": 30
+    },
+    {
+      "name": "Legal",
+      "color": "#e74c3c",
+      "badge_bg": "#fdecea",
+      "badge_fg": "#7f1d1d",
+      "order": 40
+    },
+    {
+      "name": "People Experience",
+      "color": "#8e44ad",
+      "badge_bg": "#ede9fe",
+      "badge_fg": "#3b1fa8",
+      "order": 50
+    },
+    {
+      "name": "Marketing",
+      "color": "#16a085",
+      "badge_bg": "#d2f5e3",
+      "badge_fg": "#134e2a",
+      "order": 60
+    },
+    {
+      "name": "cross function",
+      "color": "#7f8c8d",
+      "badge_bg": "#f1f0ec",
+      "badge_fg": "#44403a",
+      "order": 70
+    },
+    {
+      "name": "Global IT",
+      "color": "#e67e22",
+      "badge_bg": "#fde8d8",
+      "badge_fg": "#7c2d12",
+      "order": 80
+    },
+    {
+      "name": "EA / IT",
+      "color": "#c0392b",
+      "badge_bg": "#fce7f3",
+      "badge_fg": "#831843",
+      "order": 90
+    },
+    {
+      "name": "Cloud Ops",
+      "color": "#0e7490",
+      "badge_bg": "#ccf2f9",
+      "badge_fg": "#0e7490",
+      "order": 100
+    }
+  ],
+  "teams": [
+    {
+      "name": "Architecture",
+      "order": 10
+    },
+    {
+      "name": "BA-BusinessAnalyst",
+      "order": 20
+    },
+    {
+      "name": "ERP",
+      "order": 30
+    },
+    {
+      "name": "Integrations",
+      "order": 40
+    },
+    {
+      "name": "Internal Apps",
+      "order": 50
+    },
+    {
+      "name": "PM",
+      "order": 60
+    },
+    {
+      "name": "SALES",
+      "order": 70
+    },
+    {
+      "name": "Service Now",
+      "order": 80
+    },
+    {
+      "name": "WEB",
+      "order": 90
+    },
+    {
+      "name": "AI Engineering",
+      "order": 100
+    }
+  ],
+  "headcount": [
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 1,
+      "fte": 11
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 2,
+      "fte": 9
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 3,
+      "fte": 9
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 4,
+      "fte": 8
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 5,
+      "fte": 9
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 6,
+      "fte": 8
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 7,
+      "fte": 8
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 8,
+      "fte": 8
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 9,
+      "fte": 8
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 10,
+      "fte": 8
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 11,
+      "fte": 8
+    },
+    {
+      "team": "SALES",
+      "year": 2026,
+      "month": 12,
+      "fte": 8
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 1,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 2,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 3,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 4,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 5,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 6,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 7,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 8,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 9,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 10,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 11,
+      "fte": 5
+    },
+    {
+      "team": "ERP",
+      "year": 2026,
+      "month": 12,
+      "fte": 5
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 1,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 2,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 3,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 4,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 5,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 6,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 7,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 8,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 9,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 10,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 11,
+      "fte": 3
+    },
+    {
+      "team": "Architecture",
+      "year": 2026,
+      "month": 12,
+      "fte": 3
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 1,
+      "fte": 2
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 2,
+      "fte": 2
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 3,
+      "fte": 2
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 4,
+      "fte": 2
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 5,
+      "fte": 3
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 6,
+      "fte": 3
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 7,
+      "fte": 3
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 8,
+      "fte": 3
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 9,
+      "fte": 2
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 10,
+      "fte": 2
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 11,
+      "fte": 2
+    },
+    {
+      "team": "Integrations",
+      "year": 2026,
+      "month": 12,
+      "fte": 2
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 1,
+      "fte": 2
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 2,
+      "fte": 2
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 3,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 4,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 5,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 6,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 7,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 8,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 9,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 10,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 11,
+      "fte": 1
+    },
+    {
+      "team": "AI Engineering",
+      "year": 2026,
+      "month": 12,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 1,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 2,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 3,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 4,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 5,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 6,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 7,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 8,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 9,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 10,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 11,
+      "fte": 1
+    },
+    {
+      "team": "Internal Apps",
+      "year": 2026,
+      "month": 12,
+      "fte": 1
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 1,
+      "fte": 7
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 2,
+      "fte": 7
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 3,
+      "fte": 7
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 4,
+      "fte": 8
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 5,
+      "fte": 7
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 6,
+      "fte": 7
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 7,
+      "fte": 5
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 8,
+      "fte": 5
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 9,
+      "fte": 5
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 10,
+      "fte": 5
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 11,
+      "fte": 5
+    },
+    {
+      "team": "Service Now",
+      "year": 2026,
+      "month": 12,
+      "fte": 5
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 1,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 2,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 3,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 4,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 5,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 6,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 7,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 8,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 9,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 10,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 11,
+      "fte": 3
+    },
+    {
+      "team": "WEB",
+      "year": 2026,
+      "month": 12,
+      "fte": 3
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 1,
+      "fte": 2
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 2,
+      "fte": 2
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 3,
+      "fte": 2
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 4,
+      "fte": 2
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 5,
+      "fte": 3
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 6,
+      "fte": 3
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 7,
+      "fte": 3
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 8,
+      "fte": 3
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 9,
+      "fte": 3
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 10,
+      "fte": 2
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 11,
+      "fte": 2
+    },
+    {
+      "team": "PM",
+      "year": 2026,
+      "month": 12,
+      "fte": 2
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 1,
+      "fte": 6
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 2,
+      "fte": 5
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 3,
+      "fte": 4
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 4,
+      "fte": 4
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 5,
+      "fte": 5
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 6,
+      "fte": 4
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 7,
+      "fte": 4
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 8,
+      "fte": 4
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 9,
+      "fte": 3
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 10,
+      "fte": 3
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 11,
+      "fte": 3
+    },
+    {
+      "team": "BA-BusinessAnalyst",
+      "year": 2026,
+      "month": 12,
+      "fte": 3
+    }
+  ],
+  "projects": [
+    {
+      "name": "Enhancements",
+      "area": "cross function",
+      "priority": "0",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-01",
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 2,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 3,
+          "fte": 3
+        },
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 2.8
+        },
+        {
+          "team": "SALES",
+          "month": 5,
+          "fte": 2.8
+        },
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 7,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 8,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 12,
+          "fte": 2
+        },
+        {
+          "team": "Architecture",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 12,
+          "fte": 0.2
+        },
+        {
+          "team": "WEB",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "WEB",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "WEB",
+          "month": 3,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 4,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 5,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 6,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 7,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 8,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 9,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 10,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 11,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 12,
+          "fte": 0.1
+        },
+        {
+          "team": "AI Engineering",
+          "month": 1,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 2,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 4,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 5,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 6,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 8,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 9,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 10,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 11,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 12,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 4,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 9,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 10,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 11,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 12,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 4,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 9,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 10,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 11,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 12,
+          "fte": 1
+        },
+        {
+          "team": "Integrations",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 12,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "Internal Apps",
+          "month": 12,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 9,
+          "fte": 0.6
+        },
+        {
+          "team": "Service Now",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 12,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "BAU (Incidents & Service Request)",
+      "area": "cross function",
+      "priority": "0",
+      "t_shirt_size": "",
+      "type": "bau",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-01",
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "52968",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "ERP",
+          "month": 1,
+          "fte": 2.5
+        },
+        {
+          "team": "ERP",
+          "month": 2,
+          "fte": 2.5
+        },
+        {
+          "team": "ERP",
+          "month": 3,
+          "fte": 2.5
+        },
+        {
+          "team": "ERP",
+          "month": 4,
+          "fte": 2.5
+        },
+        {
+          "team": "ERP",
+          "month": 5,
+          "fte": 2.5
+        },
+        {
+          "team": "ERP",
+          "month": 6,
+          "fte": 1.5
+        },
+        {
+          "team": "ERP",
+          "month": 7,
+          "fte": 1.5
+        },
+        {
+          "team": "ERP",
+          "month": 8,
+          "fte": 1.5
+        },
+        {
+          "team": "ERP",
+          "month": 9,
+          "fte": 1.5
+        },
+        {
+          "team": "ERP",
+          "month": 10,
+          "fte": 1.5
+        },
+        {
+          "team": "ERP",
+          "month": 11,
+          "fte": 2.5
+        },
+        {
+          "team": "ERP",
+          "month": 12,
+          "fte": 2.5
+        },
+        {
+          "team": "WEB",
+          "month": 1,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 2,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 3,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 4,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 5,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 6,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 7,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 8,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 9,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 10,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 11,
+          "fte": 0.75
+        },
+        {
+          "team": "WEB",
+          "month": 12,
+          "fte": 0.75
+        },
+        {
+          "team": "Internal Apps",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "Internal Apps",
+          "month": 8,
+          "fte": 0.3
+        },
+        {
+          "team": "Internal Apps",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 12,
+          "fte": 0.6
+        },
+        {
+          "team": "Integrations",
+          "month": 1,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 2,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 4,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 5,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 12,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 2,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 3,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 12,
+          "fte": 1
+        },
+        {
+          "team": "Architecture",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 12,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 1
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "Service Now",
+          "month": 6,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 8,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 9,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 10,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 11,
+          "fte": 1.8
+        },
+        {
+          "team": "Service Now",
+          "month": 12,
+          "fte": 1.8
+        }
+      ]
+    },
+    {
+      "name": "102 Cloud Migration Transformation Project",
+      "area": "cross function",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001140",
+      "snow_status": "approved",
+      "ado_id": "50513",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "ERP",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 2,
+          "fte": 0.1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.4
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "107 Commissions Tool -D365 - Everstage Deal/Transaction Integrations",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001657",
+      "snow_status": "canceled",
+      "ado_id": "41204",
+      "ado_status": "in_progress",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Integrations",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "Integrations",
+          "month": 2,
+          "fte": 0.1
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "108 Commissions Tool -D365 - Everstage Deal/Transaction Integrations",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001657",
+      "snow_status": "canceled",
+      "ado_id": "41204",
+      "ado_status": "in_progress",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "SALES",
+          "month": 2,
+          "fte": 0.1
+        },
+        {
+          "team": "SALES",
+          "month": 3,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "109 Commissions Tool -D365 - Everstage Deal/Transaction Integrations",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Commission tool",
+      "snow_initiative": "INTV00001657",
+      "snow_status": "canceled",
+      "ado_id": "41204",
+      "ado_status": "in_progress",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "PM",
+          "month": 1,
+          "fte": 0.4
+        },
+        {
+          "team": "PM",
+          "month": 2,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "6sense D365 workflows",
+      "area": "Marketing",
+      "priority": "2",
+      "t_shirt_size": "M",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002017",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 7,
+          "fte": 0.3
+        }
+      ]
+    },
+    {
+      "name": "Account and Opportunity Automation",
+      "area": "Marketing",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Green",
+      "snow_initiative": "INTV00001866",
+      "snow_status": "approved",
+      "ado_id": "49815",
+      "ado_status": "in_progress",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "SALES",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 5,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Advanced Tiered Model",
+      "area": "People Experience",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 4,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.3
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 1
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 1
+        }
+      ]
+    },
+    {
+      "name": "AI Agent in CRM to support users with data capture & maintenance",
+      "area": "Sales",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001528",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "AI Automation - Supplier documents",
+      "area": "Finance",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001407",
+      "snow_status": "approved",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "AI Impact Dashboard",
+      "area": "Global IT",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002119",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "AI SDR Outreach",
+      "area": "Marketing",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001476",
+      "snow_status": "approved",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "AI Engineering",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Anual Subscription Date",
+      "area": "cross function",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001879",
+      "snow_status": "approved",
+      "ado_id": "54211",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 2,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Ardoq implementation with Partner",
+      "area": "EA / IT",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Grey",
+      "snow_initiative": "INTV00001304",
+      "snow_status": "approved",
+      "ado_id": "51219",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Automatic assigning of Web Traces to U4ERP Global Technical Support",
+      "area": "Cloud Ops",
+      "priority": "4",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001214",
+      "snow_status": "approved",
+      "ado_id": "50955",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Bank integration - TIS",
+      "area": "Finance",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002077",
+      "snow_status": "",
+      "ado_id": "49284",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "ERP",
+          "month": 1,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Benefits - UK, Canada and US (Touchless Payroll)",
+      "area": "People Experience",
+      "priority": "4",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001195",
+      "snow_status": "approved",
+      "ado_id": "50255",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Bundles - Update Product Catalogue in DH (Pricing and Packaging)",
+      "area": "Sales",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001085",
+      "snow_status": "pending",
+      "ado_id": "50153",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Integrations",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "PM",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "PM",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "PM",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "PM",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "PM",
+          "month": 9,
+          "fte": 1
+        },
+        {
+          "team": "ERP",
+          "month": 4,
+          "fte": 0.75
+        },
+        {
+          "team": "ERP",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.1
+        },
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 1
+        }
+      ]
+    },
+    {
+      "name": "C4U Migration to New CSM Setup",
+      "area": "Global IT",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002374",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "NL, CH",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "C4U Migration to New CSM Setup (Anshul)",
+      "area": "Global IT",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002374",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "Anshul",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 9,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "C4U Phase 2",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "L",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001114",
+      "snow_status": "canceled",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Claude Enterprise",
+      "area": "EA / IT",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "AI Engineering",
+          "month": 5,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Cleaning/reorganizing the Internal News and Blog SharePoint site",
+      "area": "People Experience",
+      "priority": "4",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001981",
+      "snow_status": "qualified",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "CMS Platform Project",
+      "area": "Marketing",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002202 \nINTV00002285",
+      "snow_status": "",
+      "ado_id": "57357",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "WEB",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "WEB",
+          "month": 4,
+          "fte": 1
+        },
+        {
+          "team": "WEB",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "WEB",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "WEB",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "WEB",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "WEB",
+          "month": 9,
+          "fte": 1
+        },
+        {
+          "team": "WEB",
+          "month": 10,
+          "fte": 1
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.4
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Collections Process",
+      "area": "Finance",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "legal letter draft",
+      "snow_initiative": "INTV00001403",
+      "snow_status": "approved",
+      "ado_id": "52142",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "Collections Process (Phase 2)",
+      "area": "Finance",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001402",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "28/01: BRD was already submited in january; no tests are requestes",
+      "allocations": [
+        {
+          "team": "Integrations",
+          "month": 5,
+          "fte": 0.4
+        },
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.6
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.4
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.4
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 7,
+          "fte": 0.6
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 8,
+          "fte": 0.4
+        },
+        {
+          "team": "SALES",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 7,
+          "fte": 0.1
+        },
+        {
+          "team": "SALES",
+          "month": 8,
+          "fte": 0.1
+        },
+        {
+          "team": "ERP",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 0.3
+        },
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "Service Now",
+          "month": 8,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Contract Lifecycle Management",
+      "area": "Legal",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002113",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.3
+        }
+      ]
+    },
+    {
+      "name": "Copy of Customer Contracts from CLP to Single Contract Sharepoint Site",
+      "area": "Legal",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001531",
+      "snow_status": "approved",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "28/01 - Maria is already working in january in requierements gathering",
+      "allocations": []
+    },
+    {
+      "name": "Copy of Customer Contracts from Legal team Cntract Repository to Single Contract Sharepoint Site",
+      "area": "Finance",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001473",
+      "snow_status": "",
+      "ado_id": "1531",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Cornerstone",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Dealroom",
+      "snow_initiative": "INTV00001846",
+      "snow_status": "completed",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "PM",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "Create file templates for workload cases in ServiceNow",
+      "area": "People Experience",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001399",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "CS Automation (Solution Design)",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "XL",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "CS Automation",
+      "snow_initiative": "INTV00001878",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Customer advocacy platform (Deeto)",
+      "area": "Marketing",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002061",
+      "snow_status": "qualified",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.35
+        },
+        {
+          "team": "AI Engineering",
+          "month": 9,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Customer e-invoicing enablement for G9 Denmark",
+      "area": "Finance",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001253",
+      "snow_status": "approved",
+      "ado_id": "50976",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "ERP",
+          "month": 1,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "customer MDM Transformation",
+      "area": "cross function",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Customer Success - Project setup automation",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001314",
+      "snow_status": "approved",
+      "ado_id": "52437",
+      "ado_status": "in_progress",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 0.15
+        },
+        {
+          "team": "SALES",
+          "month": 8,
+          "fte": 0.15
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 0.15
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 0.15
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 0.15
+        }
+      ]
+    },
+    {
+      "name": "Customer Support Transf Program (CSTP)",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "L",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001998",
+      "snow_status": "approved",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.75
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 1.2
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.8
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 0.8
+        },
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 0.8
+        },
+        {
+          "team": "Service Now",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 0.4
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 9,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Dealroom / CLM",
+      "area": "cross function",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001910",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.4
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.4
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 12,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 12,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 12,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Delegate Absence and expenes submission for Managers by GLT EA´s",
+      "area": "People Experience",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002034",
+      "snow_status": "qualified",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "ERP",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 6,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "DH Revamp",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001908",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "DOA 3.1 (Delegation of Authority)",
+      "area": "Sales",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001909",
+      "snow_status": "completed",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 1.5
+        },
+        {
+          "team": "SALES",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 12,
+          "fte": 1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 1
+        }
+      ]
+    },
+    {
+      "name": "Docebo implementation",
+      "area": "People Experience",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001236",
+      "snow_status": "approved",
+      "ado_id": "51114",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "WEB",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 4,
+          "fte": 0.1
+        },
+        {
+          "team": "Integrations",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Education Certification E2E Review: questionmark - credly",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002185",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Eidra / Etals - Content automation",
+      "area": "Marketing",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001508",
+      "snow_status": "approved",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.1
+        },
+        {
+          "team": "WEB",
+          "month": 3,
+          "fte": 0.1
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "Enable SNOW Workspace Experience in Employee Service",
+      "area": "People Experience",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001428",
+      "snow_status": "approved",
+      "ado_id": "55877",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Enabling Gen AI capabilities in Marketo",
+      "area": "Marketing",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001491",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "AI Engineering",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "AI Engineering",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "AI Engineering",
+          "month": 3,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "End‑of‑Life (EOL) Product Visibility & Alerts in DealHub and D365",
+      "area": "Finance",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002318",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 1
+        }
+      ]
+    },
+    {
+      "name": "End-to-End Sales Process Review",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "XL",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001911",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 12,
+          "fte": 1
+        },
+        {
+          "team": "PM",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 12,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.4
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.4
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.4
+        }
+      ]
+    },
+    {
+      "name": "Epassi",
+      "area": "People Experience",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001975",
+      "snow_status": "completed",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "ERP",
+          "month": 2,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 2,
+          "fte": 0.3
+        }
+      ]
+    },
+    {
+      "name": "EU data act",
+      "area": "Legal",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002068",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.25
+        }
+      ]
+    },
+    {
+      "name": "Fulfilment Playbook",
+      "area": "Cloud Ops",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001917",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "02/04 CB - Proposing to put project on hold",
+      "allocations": []
+    },
+    {
+      "name": "Fulfilment Quick wins",
+      "area": "Cloud Ops",
+      "priority": "1",
+      "t_shirt_size": "XL",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002308",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "02/04 CB - Proposing to put project on hold",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Fullfillment J2X",
+      "area": "CCO",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "02/04 CB - Proposing to put project on hold",
+      "allocations": []
+    },
+    {
+      "name": "Gong - Engage",
+      "area": "Sales",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Gong",
+      "snow_initiative": "INTV00002001",
+      "snow_status": "approved",
+      "ado_id": "49795",
+      "ado_status": "in_progress",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "PM",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 3,
+          "fte": 0.4
+        },
+        {
+          "team": "PM",
+          "month": 4,
+          "fte": 0.4
+        },
+        {
+          "team": "PM",
+          "month": 5,
+          "fte": 0.4
+        },
+        {
+          "team": "Architecture",
+          "month": 1,
+          "fte": 0.05
+        },
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.05
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.05
+        }
+      ]
+    },
+    {
+      "name": "Gong - Forecast",
+      "area": "Sales",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Gong",
+      "snow_initiative": "INTV00001493",
+      "snow_status": "completed",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "PM",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 2,
+          "fte": 0.1
+        },
+        {
+          "team": "PM",
+          "month": 3,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "GTM IT Architecture and design TO-BE evolution",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001913",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.3
+        }
+      ]
+    },
+    {
+      "name": "IndueD Compliance Screening for Prospects",
+      "area": "Legal",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001543",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Initiative Management - New fields for initiative management for AI prioritization",
+      "area": "Global IT",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001885",
+      "snow_status": "completed",
+      "ado_id": "55259",
+      "ado_status": "done",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.4
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.1
+        },
+        {
+          "team": "AI Engineering",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "AI Engineering",
+          "month": 2,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "Integrations for Cloud Ops: ERP/FP&A for customer instances, configuration manager",
+      "area": "Cloud Ops",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001486",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.4
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 0.1
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.4
+        }
+      ]
+    },
+    {
+      "name": "Invoices (Customer & Supliers) Extraction Automation",
+      "area": "Finance",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002015",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.3
+        }
+      ]
+    },
+    {
+      "name": "J2X AI-Assisted Migration Research Enablement",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002278",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Internal Apps",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 7,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Kick Off Search New Sactions Screening Tool",
+      "area": "Legal",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001940",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "[Fcc 02.04.2026] need to revose as SNOW freeze in june and postponefor July",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "LAER - S4U Onboarding",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "AI Engineering",
+          "month": 5,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 6,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 8,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 9,
+          "fte": 0.3
+        },
+        {
+          "team": "AI Engineering",
+          "month": 10,
+          "fte": 0.3
+        }
+      ]
+    },
+    {
+      "name": "LAER / Deal automation",
+      "area": "cross function",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "[Ines] 29-04: Andrew working in this project 50% during 3 months",
+      "allocations": []
+    },
+    {
+      "name": "Ledgy - AI Governance",
+      "area": "People Experience",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001398",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Legal and Regulatory Compliance",
+      "area": "Legal",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002147",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "AI Engineering",
+          "month": 5,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Legal Requests via Snow",
+      "area": "Legal",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Legal Requests via Snow",
+      "snow_initiative": "INTV00001990",
+      "snow_status": "approved",
+      "ado_id": "55621",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "Integrations",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 0.6
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.6
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 0.6
+        }
+      ]
+    },
+    {
+      "name": "Life of a Package",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "XL",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001510",
+      "snow_status": "screening",
+      "ado_id": "53435",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "Internal Apps",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "AI Engineering",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "AI Engineering",
+          "month": 9,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "M&A playbook",
+      "area": "cross function",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Microsoft Purview",
+      "area": "Finance",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002067",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Monetize Education",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "XL",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Fulfilment Quick wins",
+      "snow_initiative": "INTV00001111",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 12,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 12,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "New Data Request - Assessment of Data integration between Core Applications and Snowflake",
+      "area": "Finance",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001223",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Novation Process",
+      "area": "Finance",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002116",
+      "snow_status": "new",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 12,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 12,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 12,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 12,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "ERP",
+          "month": 12,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 12,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Now Assist for People Experience",
+      "area": "People Experience",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001927",
+      "snow_status": "approved",
+      "ado_id": "55731",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.8
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 1.2
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 1.2
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 1.2
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 1.2
+        }
+      ]
+    },
+    {
+      "name": "Now Assist POC for Partners in C4U",
+      "area": "CCO",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.4
+        }
+      ]
+    },
+    {
+      "name": "Olympus",
+      "area": "People Experience",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.3
+        },
+        {
+          "team": "ERP",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.3
+        }
+      ]
+    },
+    {
+      "name": "Partner Relationship Management System (PRM)",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001078",
+      "snow_status": "screening",
+      "ado_id": "41405",
+      "ado_status": "on_hold",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.4
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.4
+        },
+        {
+          "team": "PM",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 12,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 1.5
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 1.5
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 1.5
+        },
+        {
+          "team": "SALES",
+          "month": 12,
+          "fte": 1.5
+        }
+      ]
+    },
+    {
+      "name": "Partners Automation POs",
+      "area": "Sales",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001072 INTV00001527",
+      "snow_status": "",
+      "ado_id": "49814\n53663",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "SALES",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "PM",
+          "month": 8,
+          "fte": 0.4
+        },
+        {
+          "team": "PM",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 4,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 5,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 6,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.25
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 0.25
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 8,
+          "fte": 0.4
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 6,
+          "fte": 0.3
+        },
+        {
+          "team": "ERP",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 8,
+          "fte": 0.4
+        },
+        {
+          "team": "ERP",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 11,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Payroll Compliance",
+      "area": "People Experience",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Portfolio Management (ePMO)",
+      "area": "CCO",
+      "priority": "1",
+      "t_shirt_size": "XL",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001563",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 1,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 9,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 10,
+          "fte": 0.3
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 7,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 8,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 9,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 10,
+          "fte": 0.3
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 11,
+          "fte": 0.3
+        },
+        {
+          "team": "PM",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "PM",
+          "month": 11,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 9,
+          "fte": 0.3
+        },
+        {
+          "team": "ERP",
+          "month": 10,
+          "fte": 0.3
+        },
+        {
+          "team": "ERP",
+          "month": 11,
+          "fte": 0.3
+        }
+      ]
+    },
+    {
+      "name": "Project Setup Automation (Billing Platform)",
+      "area": "Finance",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001077",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 3,
+          "fte": 0.1
+        }
+      ]
+    },
+    {
+      "name": "Promotions Project",
+      "area": "People Experience",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "Promotions Project",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.4
+        },
+        {
+          "team": "Integrations",
+          "month": 11,
+          "fte": 0.4
+        },
+        {
+          "team": "Integrations",
+          "month": 12,
+          "fte": 0.4
+        },
+        {
+          "team": "Service Now",
+          "month": 11,
+          "fte": 0.4
+        },
+        {
+          "team": "Service Now",
+          "month": 12,
+          "fte": 0.4
+        }
+      ]
+    },
+    {
+      "name": "PX Enhacements",
+      "area": "People Experience",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Renewals Process Automation (Phase 1)",
+      "area": "Sales",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001076",
+      "snow_status": "completed",
+      "ado_id": "52784",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "[FCC] 13.04 : update capacity allocation after IT planning call",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 1,
+          "fte": 4
+        },
+        {
+          "team": "SALES",
+          "month": 2,
+          "fte": 3
+        },
+        {
+          "team": "Architecture",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 1,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 2,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Renewals Process Automation (Phase 2)",
+      "area": "Sales",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001076",
+      "snow_status": "completed",
+      "ado_id": "53914",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 3,
+          "fte": 2
+        },
+        {
+          "team": "SALES",
+          "month": 4,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 5,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 7,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 8,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 9,
+          "fte": 1
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 1
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 9,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 10,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 3,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 8,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 9,
+          "fte": 0.5
+        },
+        {
+          "team": "PM",
+          "month": 10,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Replatforming of Product Master",
+      "area": "Finance",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002020",
+      "snow_status": "qualified",
+      "ado_id": "56059",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 7,
+          "fte": 0.5
+        },
+        {
+          "team": "Service Now",
+          "month": 8,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 4,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 5,
+          "fte": 0.2
+        },
+        {
+          "team": "Architecture",
+          "month": 6,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 4,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 5,
+          "fte": 0.5
+        },
+        {
+          "team": "Integrations",
+          "month": 7,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 8,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Replatforming of Product Master - Phase 2 TBD",
+      "area": "Finance",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002044",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Review process for security incidents",
+      "area": "Legal",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001311",
+      "snow_status": "approved",
+      "ado_id": "51712",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 1,
+          "fte": 0.25
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 2,
+          "fte": 0.25
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 3,
+          "fte": 0.25
+        },
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.1
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.4
+        }
+      ]
+    },
+    {
+      "name": "Revision of current Security Process",
+      "area": "Legal",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001312",
+      "snow_status": "completed",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Security Roles and RACI Review",
+      "area": "Sales",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001912",
+      "snow_status": "screening",
+      "ado_id": "48819",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "SALES",
+          "month": 6,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 10,
+          "fte": 0.5
+        },
+        {
+          "team": "SALES",
+          "month": 11,
+          "fte": 0.5
+        },
+        {
+          "team": "BA-BusinessAnalyst",
+          "month": 6,
+          "fte": 0.5
+        }
+      ]
+    },
+    {
+      "name": "ServiceNow Upgrade to Australia (Development Freeze)",
+      "area": "Global IT",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 6,
+          "fte": 3
+        }
+      ]
+    },
+    {
+      "name": "Smart Ticket Categorization",
+      "area": "People Experience",
+      "priority": "4",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00002085",
+      "snow_status": "approved",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "Service Now",
+          "month": 1,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "Service Now",
+          "month": 4,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Subscription Data Management - Cleanup",
+      "area": "Finance",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001532",
+      "snow_status": "pending",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Supplier E-invoicing - E connect",
+      "area": "Finance",
+      "priority": "1",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001970",
+      "snow_status": "qualified",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": [
+        {
+          "team": "ERP",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 3,
+          "fte": 0.2
+        },
+        {
+          "team": "ERP",
+          "month": 4,
+          "fte": 0.3
+        },
+        {
+          "team": "Architecture",
+          "month": 2,
+          "fte": 0.2
+        },
+        {
+          "team": "Integrations",
+          "month": 2,
+          "fte": 0.2
+        }
+      ]
+    },
+    {
+      "name": "Update naming convention",
+      "area": "Cloud Ops",
+      "priority": "3",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001217",
+      "snow_status": "completed",
+      "ado_id": "50957",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Update to a request \"Install/Update customization (incl. code review)\"",
+      "area": "Cloud Ops",
+      "priority": "2",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001216",
+      "snow_status": "completed",
+      "ado_id": "50956",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "Virtual Supervisor",
+      "area": "Finance",
+      "priority": "",
+      "t_shirt_size": "",
+      "type": "",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "",
+      "snow_status": "",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    },
+    {
+      "name": "XBRL conversion",
+      "area": "Legal",
+      "priority": "4",
+      "t_shirt_size": "",
+      "type": "project",
+      "start_date": null,
+      "end_date": null,
+      "steerco_status": "",
+      "snow_initiative": "INTV00001231",
+      "snow_status": "screening",
+      "ado_id": "",
+      "ado_status": "",
+      "initiatives_group": "",
+      "comments": "",
+      "allocations": []
+    }
+  ]
+}

@@ -312,3 +312,66 @@ throughout method bodies; `var ClassName = Class.create()` kept per the spec §9
 ### Repo source saved
 - C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\src\script_includes\CapacityPlannerService.js
 - C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\src\script_includes\CapacityPlannerSeedData.js
+
+## Phase 6 — Seed data (data migration)
+- Type: Data migration (local parse) + Script Include enhancement + REST pre-load of dimensions
+- Tables: x_335329_capplan_area, _team (pre-loaded); _project/_allocation/_headcount (operator seed run)
+- Scope: x_335329_capplan
+- Status: BUILT (load run itself is the operator's synchronous UI step — see MANUAL_STEPS §4)
+- Built at: 2026-06-12
+
+### A. seed_2026.json generated (§12.2)
+- Parsed FIRST `const RAW_DATA=[...]` (HTML line 544; duplicated 2nd declaration ignored) +
+  HEADCOUNT (line 546) + constant maps (AREA_CLR/AREA_CLS/TEAMS/PRI_LBL/SS_*/MONTHS, lines 549-564).
+- Local Node parser (brace-matched extraction, no eval) -> seed/seed_2026.json (valid JSON, 132 KB).
+- Counts: areas 10, teams 10, projects 99, allocations 779 (fte>0), headcount 120.
+- Reconciliation: project count 99; SUM(allocation.fte) 386.75; SUM(headcount.fte) 438.
+  Per-team Jan allocation: SALES 9.2, Architecture 1.75, WEB 0.95, AI Engineering 0.6,
+  BA-BusinessAnalyst 5.45, ERP 3.5, Integrations 1.3, Internal Apps 0.7, Service Now 5.75, PM 2.2.
+- Sanitization: 130 `<openpy` junk dates -> null; 1 dirty t-shirt size ("01.03.2026" on
+  "Promotions Project") -> ""; names trimmed + whitespace collapsed + zero-width/NBSP stripped;
+  0 Holidays rows (none present); 0 stray teams (the spec-warned "Sharepoint" stray is NOT in the
+  first RAW_DATA block's ta maps); multi-value snow_initiative/ado_id kept verbatim (newlines).
+- Mappings (§7): snow_status display->value (Approved->approved etc.); ado_status (In Progress->
+  in_progress, On Hold->on_hold, Done->done); type (Project->project, BAU->bau); months->ints 1-12;
+  YYYY-MM->YYYY-MM-01. Spot-checked 7 projects vs prototype — all correct.
+- Migration log: seed/seed_log.md (counts, every sanitization action, recon totals for §12.3).
+
+### B. Synchronous UI run wiring
+- Added `loadFromAttachment(fileName, year)` to CapacityPlannerSeedData: reads the JSON attached
+  to its own sys_script_include record (sys_id 01e1e23f...4343) via GlideSysAttachment.getContent,
+  then delegates to load(). One-paste operator snippet documented in MANUAL_STEPS §4b.
+- Repo file updated + pushed to instance via MCP update_script_include (sys_mod_count 1, ok).
+- Rationale for UI run: ad-hoc scheduler does not execute on this PDI (sys_trigger never claimed,
+  5x confirmed); Scripts-Background runs inline in the operator session. load() already idempotent.
+
+### C. Cheap dimensions pre-loaded via MCP create_record (idempotent: tables were empty)
+- 10 areas inserted with name/color/badge_bg/badge_fg/order/active (verified: count=10, colors per §7).
+- 10 teams inserted with canonical names/order/active (verified: count=10).
+- Projects/allocations/headcount (~1,700 rows) deliberately NOT bulk-inserted via REST — left to the
+  operator seed run, which idempotently upserts everything (and re-checks areas/teams as updates).
+
+### D. Operator run documented
+- tasks/MANUAL_STEPS.md §4: attach step (4a), Scripts-Background run snippet scoped to Capacity
+  Planner (4b) + inline fallback, and §12.3 verification queries (4c) with expected totals.
+
+### Deviations / blockers
+- BLOCKER (worked around): could not attach seed_2026.json via REST. The MCP toolset has no
+  attachment-upload tool, and no direct PDI Attachment-API basic-auth creds (SN_USER/SN_PASS unset)
+  are available. The sys_attachment + sys_attachment_doc chunk-crafting route is impractical
+  (gzip+base64 chunking + hash). Resolution: attaching is a one-click UI step (MANUAL_STEPS §4a),
+  and loadFromAttachment() consumes it; an inline-paste fallback path is also documented so the
+  run is never blocked. seed_2026.json is authoritative and version-controlled in the repo.
+- The load run + §12.3 reconciliation are the operator's step; this agent verified everything
+  verifiable now (JSON shape/counts, areas+teams loaded, mappings spot-check). No attachment row
+  exists yet on the script-include record (will appear after step 4a).
+
+### ATF test suggestions (Phase 8)
+- T07 Seed idempotency: run loadFromAttachment twice on a subset -> second run all `u:`/`s:`, 0 created.
+- Post-seed data assert: getBootstrap(2026) returns projects.length==99, allocation fte sum 386.75.
+
+### Phase 6 repo artifacts saved
+- C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\seed\seed_2026.json
+- C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\seed\seed_log.md
+- C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\src\script_includes\CapacityPlannerSeedData.js (loadFromAttachment added)
+- C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\tasks\MANUAL_STEPS.md (§4 added)

@@ -97,6 +97,47 @@ CapacityPlannerSeedData.prototype = {
         return this._summary(this._errors.length === 0);
     },
 
+    /**
+     * Convenience entry point for a one-paste synchronous UI run
+     * (Scripts - Background). Reads the seed JSON that is attached to
+     * THIS script-include record (table sys_script_include) and hands it
+     * to load(). The ad-hoc job scheduler does not execute on this PDI,
+     * so the operator pastes a 2-line snippet that calls this method and
+     * the whole load runs inline in their session.
+     *
+     * @param {string} [fileName] - attachment file name; default seed_2026.json.
+     * @param {number} [year] - planning year; defaults to default_year property.
+     * @returns {Object} {ok, stats, errors}
+     */
+    loadFromAttachment: function (fileName, year) {
+        const fname = this._trim(fileName) || 'seed_2026.json';
+        const SI_TABLE = 'sys_script_include';
+        const SI_SYS_ID = '01e1e23f47550f10654c57f1d16d4343';
+
+        // Locate the attachment on this script-include record.
+        const ga = new GlideRecord('sys_attachment');
+        ga.addQuery('table_name', SI_TABLE);
+        ga.addQuery('table_sys_id', SI_SYS_ID);
+        ga.addQuery('file_name', fname);
+        ga.orderByDesc('sys_created_on');
+        ga.setLimit(1);
+        ga.query();
+        if (!ga.next()) {
+            this._err('Attachment "' + fname + '" not found on ' + SI_TABLE +
+                ' ' + SI_SYS_ID + '.');
+            return this._summary(false);
+        }
+
+        const sa = new GlideSysAttachment();
+        const text = sa.getContent(ga); // returns the file contents as a string
+        if (!text) {
+            this._err('Attachment "' + fname + '" is empty or unreadable.');
+            return this._summary(false);
+        }
+
+        return this.load(text, year);
+    },
+
     _summary: function (ok) {
         let line = '[CapacityPlannerSeedData] Summary (ok=' + ok + '): ';
         for (const t in this._stats) {
