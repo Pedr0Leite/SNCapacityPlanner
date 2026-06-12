@@ -375,3 +375,63 @@ throughout method bodies; `var ClassName = Class.create()` kept per the spec §9
 - C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\seed\seed_log.md
 - C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\src\script_includes\CapacityPlannerSeedData.js (loadFromAttachment added)
 - C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\tasks\MANUAL_STEPS.md (§4 added)
+
+---
+
+## Phase 7 — Widget & Portal
+
+### cap-planner (sp_widget)
+- Type: Service Portal Widget
+- Scope: x_335329_capplan (Capacity Planner)
+- sys_id: b64866b347950f10654c57f1d16d437e  (id=cap-planner, controller_as=c)
+- Status: BUILT
+- Notes: All four code fields populated — template (ported prototype body, neutral
+  text logo, `.capx` wrapper, no Google Fonts), css (full prototype <style> nested
+  under `.capx`, body->flex container height calc(100vh - 50px)), script (thin router
+  §9.3 -> CapacityPlannerService, canEdit + role re-checks + id/month/fte validation),
+  client_script (near-1:1 vanilla JS port adapted per §10.3). Built via MCP
+  create_record + 4x update_record (one per large field). The client_script update
+  echo exceeded the tool output cap but the WRITE succeeded (verified via follow-up
+  query + grep of the saved tool-result: api.controller / wireEvents / buildXLSX
+  present, 0 getElementById).
+
+### Widget dependency -> SheetJS UI Script
+- sp_dependency "Capacity Planner SheetJS": 742a2abf47950f10654c57f1d16d4318 (page_load=true)
+- m2m_sp_widget_dependency (widget<->dependency): d62a6abf47950f10654c57f1d16d4359
+- sp_js_include -> UI Script CapacityPlannerSheetJS (c2ef397f47110f10654c57f1d16d43a5): 2a2a6abf47950f10654c57f1d16d43f9 (source=UI Script)
+- Status: BUILT — chain verified end-to-end.
+
+### Portal /cp (sp_portal)
+- sys_id: 373a2ebf47950f10654c57f1d16d4334  (url_suffix=cp, title="Capacity Planner", homepage=cap_planner)
+- Status: BUILT
+
+### Page cap_planner (sp_page)
+- sys_id: e63aeabf47950f10654c57f1d16d4386
+- roles: x_335329_capplan.user  (page access restriction per §8/§10.1)
+- Layout: sp_container 544a6ebf47950f10654c57f1d16d438a (width=container-fluid, full width)
+  -> sp_row ca4aaebf47950f10654c57f1d16d43dd -> sp_column 2b4aeebf47950f10654c57f1d16d43e0
+  (size=12) -> sp_instance b95a22ff47950f10654c57f1d16d434b (cap-planner, active=true)
+- Status: BUILT
+
+### Grep verification (saved client.js)
+- document.getElementById: 0 (only in comments) — all lookups via $el.querySelector
+- inline onclick: 0 (only in comments) — delegated $el.addEventListener + data-act/closest
+- HTML-escape esc(): 67 call sites — every interpolated user value escaped
+- canEdit gating: 15 sites — cell edit / add-remove team / reset hidden unless data.canEdit
+
+### Repo source paths
+- src/widget/template.html
+- src/widget/style.scss
+- src/widget/client.js
+- src/widget/server.js
+
+### Deferred (operator)
+- Full browser end-to-end verification (5 views, cell persist, slider/filters/kanban/
+  heatmap/export, .user read-only) — needs logged-in browser + seed run + ACLs.
+  Checklist added to tasks/MANUAL_STEPS.md §6.
+
+### ATF suggestions (for Phase 8)
+- T-W1: bootstrap action returns data.bootstrap with teams/areas/choices/headcount/projects.
+- T-W2: saveCell as planner upserts; reload bootstrap reflects new fte; as .user -> insufficient_role.
+- T-W3: export action returns 3 sheets with §11 headers.
+- T-W4: removeTeam deletes all of a team's allocations for the year.

@@ -198,3 +198,53 @@ while (gj.next()) {
 
 PASS criteria: projects == 99; allocation FTE sum within 0.01 of 386.75;
 headcount sum == 438; per-team Jan totals match the seed_log.md table.
+
+## 6. Phase 7 — Widget browser verification (DEFERRED — needs a logged-in browser)
+
+The widget, `/cp` portal, `cap_planner` page, sp_instance and the SheetJS
+dependency are all built and structurally verified via REST (see dev-log.md
+Phase 7). The following are end-to-end checks that REST cannot perform — they
+require a real browser session AND prerequisites below. Spec §16 Phase 7 verify
+list + Definition of Done §18.
+
+**Prerequisites (must be done first):**
+- [ ] Operator has run the seed (`CapacityPlannerSeedData`) so projects +
+      allocations exist (areas/teams are already loaded; without the seed the
+      widget renders but Pipeline/Projects/Heatmap are empty).
+- [ ] ACL matrix applied (MANUAL_STEPS §3) — otherwise `GlideRecordSecure`
+      reads in the service return empty arrays and the widget shows no data.
+- [ ] Test users exist: one with `x_335329_capplan.planner`, one with only
+      `x_335329_capplan.user`.
+
+**Browser checks — open `https://dev295018.service-now.com/cp` (homepage = cap_planner):**
+- [ ] Page loads; widget renders inside the `.capx` container; no console
+      errors; SheetJS (`XLSX`) is present on `window` (dependency loaded).
+- [ ] All 5 views render with seeded data: **Overview** (KPI cards, by-area
+      cards, project table with sparklines), **Pipeline** (kanban columns in
+      SS_ORDER with per-column FTE footers), **Projects** (sidebar list +
+      detail card + allocation grid), **Heatmap** (Capacity mode: Alloc/HC/Gap
+      rows with green/amber/red gap colors; Allocation mode: blue intensity),
+      **By Team** (team cards + per-team detail table).
+- [ ] As **planner**: click an allocation cell → edit → Enter → toast "Saved";
+      **reload the page** → the new value persists (server round-trip OK).
+- [ ] As planner: zero a cell → row total drops, value cleared (delete path).
+- [ ] As planner: Add team / Remove team (with confirm) work and persist.
+- [ ] Two-thumb **month slider** restricts every view's aggregation; Reset
+      restores Jan–Dec.
+- [ ] Sidebar + Overview + Pipeline **filters** (area, priority, team, SNOW
+      multi-select, search) all narrow the lists; SNOW dropdown opens/closes.
+- [ ] **Export to Excel** downloads `<yyyymmdd>_projects_capacity_2026.xlsx`
+      that opens in Excel with 3 sheets: "Soft & Hard Planning (2)",
+      "Capacity vs Headcount", "Change Log" — headers per spec §11; Change Log
+      lists the cells edited this session with Original/Updated/Delta.
+- [ ] As **.user only** (no planner): NO edit affordances — no cell editing,
+      no Add/Remove team, no fill-row, no Reset-all; export still works
+      (read-only aggregation). A save attempt (if forced) returns
+      `insufficient_role`.
+- [ ] XSS spot-check: a project whose name/comments contain `<`, `>`, `&`, `"`
+      renders as literal text (HTML-escaped), not interpreted markup.
+- [ ] Confirm no syslog errors (source = app scope) during a full pass.
+
+> Note: the portal header height in `style.scss` is `calc(100vh - 50px)`. If the
+> `/cp` portal uses a taller/shorter header the bottom of the widget may clip or
+> leave a gap — adjust the 50px in the widget CSS if needed (cosmetic only).

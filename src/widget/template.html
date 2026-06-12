@@ -1,0 +1,196 @@
+<!--
+  Capacity Planner widget — HTML template.
+  Ported from the prototype <body> markup (topbar, two-thumb month slider,
+  sidebar, the 5 panels). Wrappers (<html>/<head>/<body>) and the Google Fonts
+  link are dropped; the UNIT4 base64 logo is replaced with a neutral text logo.
+  Everything is wrapped in a single .capx container so CSS cannot bleed into the
+  portal. IDs are preserved but the controller scopes all lookups to $element[0].
+-->
+<div class="capx">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="logo"><span class="logo-text">Capacity&nbsp;Planner</span></div>
+    <div class="top-title">Project Pipeline &amp; Capacity Planner — {{::data.year}}</div>
+    <div class="tabs">
+      <button class="tab" data-v="overview">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 10l4-4 3 3 5-5"/><rect x="1" y="1" width="14" height="14" rx="2"/></svg>Overview
+      </button>
+      <button class="tab" data-v="pipeline">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="1" width="3.5" height="14" rx="1"/><rect x="6.3" y="1" width="3.5" height="14" rx="1"/><rect x="11.5" y="1" width="3.5" height="14" rx="1"/></svg>Pipeline
+      </button>
+      <button class="tab active" data-v="projects">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>Projects
+      </button>
+      <button class="tab" data-v="heatmap">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="1" width="3" height="3" rx=".5"/><rect x="6" y="1" width="3" height="3" rx=".5"/><rect x="11" y="1" width="4" height="3" rx=".5"/><rect x="1" y="6" width="3" height="3" rx=".5"/><rect x="6" y="6" width="3" height="3" rx=".5"/><rect x="11" y="6" width="4" height="3" rx=".5"/><rect x="1" y="11" width="3" height="4" rx=".5"/><rect x="6" y="11" width="3" height="4" rx=".5"/><rect x="11" y="11" width="4" height="4" rx=".5"/></svg>Heatmap
+      </button>
+      <button class="tab" data-v="team">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="5" r="2.5"/><circle cx="11" cy="5" r="2"/><path d="M1 13c0-2.2 2.2-4 5-4s5 1.8 5 4"/><path d="M13 13c0-1.5-1-2.8-2.5-3.3"/></svg>By Team
+      </button>
+    </div>
+    <button class="export-btn" id="export-btn">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2v8M5 7l3 3 3-3"/><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2"/></svg>
+      Export to Excel
+    </button>
+  </div>
+
+  <!-- MONTH RANGE BAR -->
+  <div class="mbar">
+    <span class="mbar-label">Period</span>
+    <div class="mbar-track-wrap">
+      <div class="mbar-track" id="mtrack">
+        <div class="mbar-fill" id="mfill"></div>
+        <div class="mbar-thumb" id="mthumb-s"></div>
+        <div class="mbar-thumb" id="mthumb-e"></div>
+      </div>
+      <div class="mbar-pips" id="mpips"></div>
+    </div>
+    <div class="mbar-range" id="mrange-label">Jan – Dec</div>
+    <button class="mbar-reset" id="mreset">Reset</button>
+  </div>
+
+  <!-- LAYOUT -->
+  <div class="layout" id="layout">
+
+    <!-- SIDEBAR (hidden in wide views) -->
+    <div class="sidebar">
+      <div class="sb-head">
+        <div class="sb-title">Pipeline — <span id="sb-title-count">0</span> projects</div>
+        <div class="sb-search">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6.5" cy="6.5" r="4"/><path d="M11 11l3 3"/></svg>
+          <input type="text" id="sb-search" placeholder="Search projects…">
+        </div>
+        <div class="sb-filters">
+          <select id="sb-area"><option value="">All areas</option></select>
+          <select id="sb-pri"><option value="">All pri.</option><option value="0">P0</option><option value="1">P1</option><option value="2">P2</option><option value="3">P3</option><option value="4">P4</option></select>
+          <select id="sb-team"><option value="">All teams</option></select>
+          <div class="snow-filter" id="sb-snow-filter">
+            <button class="snow-trigger" id="sb-snow-trigger">
+              <span class="snow-trigger-txt" id="sb-snow-label">All SNOW</span>
+              <svg class="snow-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg>
+            </button>
+            <div class="snow-drop" id="sb-snow-drop"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sb-list" id="sb-list"></div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- PROJECTS -->
+      <div class="panel active" id="view-projects">
+        <div id="detail-root">
+          <div class="empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            <p>Select a project from the sidebar</p>
+            <p style="font-size:12px;color:var(--ink3)">Click any project to view and edit capacity allocations</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEATMAP -->
+      <div class="panel" id="view-heatmap">
+        <div class="hm-controls">
+          <select id="hm-area"><option value="">All areas</option></select>
+          <select id="hm-pri"><option value="">All priorities</option><option value="0">P0 BAU</option><option value="1">P1 High</option><option value="2">P2 Medium</option><option value="3">P3 Low</option></select>
+          <select id="hm-team"><option value="">All teams</option></select>
+          <div class="mode-tog">
+            <button class="mode-btn active" data-mode="capacity">Capacity</button>
+            <button class="mode-btn" data-mode="alloc">Allocation</button>
+          </div>
+          <div class="legend" style="margin-left:auto">
+            <div class="legend-item"><div class="legend-sw" style="background:var(--green-lt);border:1px solid #a7f3d0"></div>Available</div>
+            <div class="legend-item"><div class="legend-sw" style="background:var(--amber-lt);border:1px solid #fde68a"></div>&lt;1 FTE left</div>
+            <div class="legend-item"><div class="legend-sw" style="background:var(--red-lt);border:1px solid #fca5a5"></div>Over cap</div>
+            <span style="font-size:9px;color:var(--ink3);border-left:1px solid var(--border);padding-left:8px;margin-left:4px">Gap = Headcount − Allocated</span>
+          </div>
+        </div>
+        <div class="hm-wrap"><table class="hm-table" id="hm-table"></table></div>
+      </div>
+
+      <!-- TEAM -->
+      <div class="panel" id="view-team">
+        <div class="team-cards" id="team-cards"></div>
+        <div id="team-detail"></div>
+      </div>
+
+      <!-- OVERVIEW (wide) -->
+      <div class="panel" id="view-overview">
+        <div id="chg-bar" style="display:none" class="change-bar">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px;color:var(--amber);flex-shrink:0"><circle cx="8" cy="8" r="6"/><path d="M8 5v3M8 11v.5"/></svg>
+          <span style="font-size:12px;color:var(--ink2);flex:1">You have <span id="chg-count" class="chg-badge">0</span> unsaved changes</span>
+          <button class="export-btn" id="chg-export-btn" style="font-size:11px;padding:5px 13px">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2v8M5 7l3 3 3-3"/><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2"/></svg>Export Excel
+          </button>
+          <button class="btn" id="chg-reset-btn">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7A5 5 0 1 0 7 2"/><path d="M2 2v5h5"/></svg>Reset all
+          </button>
+        </div>
+        <div class="ov-kpis" id="ov-kpis"></div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink3);margin-bottom:10px">By area</div>
+        <div class="ov-areas" id="ov-areas"></div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink3);margin-bottom:10px">All projects</div>
+        <div class="ov-controls">
+          <div class="ov-search">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6.5" cy="6.5" r="4"/><path d="M11 11l3 3"/></svg>
+            <input type="text" id="ov-search" placeholder="Search…">
+          </div>
+          <select id="ov-area"><option value="">All areas</option></select>
+          <select id="ov-pri"><option value="">All priorities</option><option value="0">P0</option><option value="1">P1</option><option value="2">P2</option><option value="3">P3</option><option value="4">P4</option></select>
+          <div class="snow-filter" id="ov-snow-filter">
+            <button class="snow-trigger" id="ov-snow-trigger">
+              <span class="snow-trigger-txt" id="ov-snow-label">All SNOW status</span>
+              <svg class="snow-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg>
+            </button>
+            <div class="snow-drop" id="ov-snow-drop"></div>
+          </div>
+          <select id="ov-status"><option value="">All</option><option value="planned">Planned</option><option value="unplanned">Unplanned</option></select>
+          <span id="ov-count" style="font-size:11px;color:var(--ink3)"></span>
+        </div>
+        <div class="ov-table-wrap">
+          <table class="ov-table">
+            <thead><tr>
+              <th data-s="n" style="min-width:190px">Project <span id="si-n">↕</span></th>
+              <th data-s="a" style="width:100px">Area <span id="si-a">↕</span></th>
+              <th data-s="p" style="width:44px">Pri <span id="si-p">↕</span></th>
+              <th data-s="s" style="width:44px">Size <span id="si-s">↕</span></th>
+              <th data-s="ss" style="width:90px">SNOW <span id="si-ss">↕</span></th>
+              <th style="width:120px">Teams</th>
+              <th data-s="st" style="width:70px">Start <span id="si-st">↕</span></th>
+              <th data-s="en" style="width:70px">End <span id="si-en">↕</span></th>
+              <th style="width:88px">Load</th>
+              <th data-s="fte" style="width:54px;text-align:right">FTE/yr <span id="si-fte">↕</span></th>
+            </tr></thead>
+            <tbody id="ov-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PIPELINE -->
+      <div class="panel" id="view-pipeline">
+        <div class="pl-controls">
+          <select id="pl-area"><option value="">All areas</option></select>
+          <select id="pl-pri"><option value="">All priorities</option><option value="0">P0</option><option value="1">P1</option><option value="2">P2</option><option value="3">P3</option><option value="4">P4</option></select>
+          <select id="pl-team"><option value="">All teams</option></select>
+          <div class="snow-filter" id="pl-snow-filter">
+            <button class="snow-trigger" id="pl-snow-trigger">
+              <span class="snow-trigger-txt" id="pl-snow-label">All SNOW</span>
+              <svg class="snow-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg>
+            </button>
+            <div class="snow-drop" id="pl-snow-drop"></div>
+          </div>
+          <input type="text" id="pl-search" placeholder="Search…" style="width:160px">
+          <span id="pl-count" style="font-size:11px;color:var(--ink3)"></span>
+        </div>
+        <div class="pl-board" id="pl-board"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+</div>
