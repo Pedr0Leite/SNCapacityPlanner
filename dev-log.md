@@ -210,3 +210,105 @@ Tooling: MCP `servicenow-sse` synchronous REST. Scope verified `x_335329_capplan
 - T06: impersonate .planner → allocation CRUD OK; project create/write fails; BUT project.comments
   write succeeds (field ACL); team/area/headcount create fails.
 - Admin: full CRUD on all 5 tables via containment.
+
+---
+
+## Phase 5 — Server layer (Script Includes)
+
+Tooling: MCP `servicenow-sse` `create_script_include` (synchronous REST). Scope verified
+`x_335329_capplan` (active_scope) before build. Built 2026-06-12. ES2021 runtime — const/let
+throughout method bodies; `var ClassName = Class.create()` kept per the spec §9.1 skeleton.
+
+### Components built
+
+## CapacityPlannerService
+- Type: Script Include (sys_script_include)
+- Scope: x_335329_capplan  | api_name: x_335329_capplan.CapacityPlannerService
+- sys_id: **ccb1eafb47550f10654c57f1d16d43aa**
+- client_callable: **false** | active: true | access: All application scopes (public) | type: "CapacityPlannerService"
+- Status: BUILT (saved without syntax error — SN rejects invalid SI on save; record persisted)
+- Implements §9.1 method set with §9.2 payload contract:
+  - `getBootstrap(year)` — 3 BULK queries (projects via GlideRecordSecure orderBy name;
+    allocations via GlideRecordSecure addQuery(year) orderBy project — single pass fills
+    projects[].ta keyed by team sys_id then integer month; headcount via GlideRecord
+    addQuery(year) orderBy team). Plus 2 tiny static-reference reads (team, area). NO N+1.
+    Returns {year, months[12], teams[{id,name,order}], areas[{id,name,color,badgeBg,badgeFg}],
+    choices{priority,snowStatus(SS_ORDER),adoStatus}, headcount{teamId:{1..12}},
+    projects[{id,n,a,p,s,ty,sc,snow,ado,ss,as,ig,comments,st,en,ta}]}. Month keys are ints 1–12.
+  - `saveAllocation(projectId,teamId,year,month,fte)` — GlideRecordSecure upsert of one cell;
+    **fte==0 deletes** the existing row (no-op if none) and returns {ok:true,deleted:true};
+    else update/insert returns {ok,sysId}. Role re-check first.
+  - `saveAllocations(ops)` — loops saveAllocation, returns {ok, results[]} per-op.
+  - `validateTeamForProject(projectId,teamId)` — id validation + existence check, returns team meta.
+  - `removeTeamFromProject(projectId,teamId,year)` — deletes all allocations for project+team
+    (+year if valid); returns {ok, deleted:count}. Role re-check.
+  - `getExportData(year,changes)` — 3 datasets (arrays of row-arrays, header row first), LABELS not codes:
+    Sheet1 "Soft & Hard Planning (2)" one row per project×team with the EXACT §11 header
+    (Areas, Priority, Tech Team, Type of work, ADO, SNOW, ADO Status, SNOW status, SteerCo Status,
+    Projects Name, Initiatives Group, Dependency, T-Shirt Sizing, Start date, End date, Jan..Dec, Comments);
+    Sheet2 "Capacity vs Headcount" per-team Allocated/Headcount/Gap rows × 12 months + Total;
+    Sheet3 "Change Log" (Project, Tech Team, Month, Original FTE, Updated FTE, Delta) from client deltas.
+    Reuses getBootstrap as the single live-data source (still 3 bulk queries).
+- Defensive everywhere: id regex `/^[0-9a-f]{32}$/`; parseFloat/parseInt + isNaN guards; month 1–12;
+  **planner role re-check on every mutation** (`gs.hasRole('x_335329_capplan.planner')` → error
+  'insufficient_role'); cap from property `max_fte_per_cell`; year defaults to `default_year`.
+  GlideRecordSecure for all project/allocation reads+writes (denied reads → empty arrays, not throw).
+- JSDoc on every public method.
+
+## CapacityPlannerSeedData
+- Type: Script Include (sys_script_include), fix-script-style loader class
+- Scope: x_335329_capplan  | api_name: x_335329_capplan.CapacityPlannerSeedData
+- sys_id: **01e1e23f47550f10654c57f1d16d4343**
+- client_callable: **false** | active: true | access: All application scopes (public) | type: "CapacityPlannerSeedData"
+- Status: BUILT (NOT RUN — execution is Phase 6 per instructions)
+- Implements §12: `load(payload, year)` consumes §12.2 JSON shape
+  `{areas, teams, headcount, projects:[{...,allocations:[{team,month,fte}]}]}`.
+  Load order Areas→Teams→Projects→Allocations→Headcount. Idempotent natural-key upserts:
+  area.name; team.name; project.name+initiatives_group; allocation project+team+year+month;
+  headcount team+year+month. Uses **GlideRecord (NOT Secure)** as admin. `gs.info` summary of
+  created/updated/skipped per table; **abort-all on >0 hard errors** (returns after each phase if
+  errors accumulated). Stray/non-canonical teams logged via gs.warn and SKIPPED (no team created),
+  per §12.2. Headcount loader accepts both flat rows and the nested {team:{month:fte}} map.
+
+### Verification — path used: DEFERRED (background scripts still stalled)
+- Re-ran the background smoke probe as instructed: scheduled `execute_background_script` writing a
+  syslog row source='CAPPLAN_P5', then queried syslog. Trigger b1502e3b... stayed **state=Ready,
+  claimed_by empty, next_action in the past, run_count 0**; syslog source=CAPPLAN_P5 = 0 rows.
+  => ad-hoc RunScriptJob jobs STILL not being claimed on this PDI (consistent with Phases 2–4).
+- Therefore functional smoke (getBootstrap empties, save/delete round-trips) is **DEFERRED to
+  Phase 8 ATF (T01–T08)**, which runs through the transaction engine, not sys_trigger.
+- Records-saved verification (sys_script_include query, display values): BOTH present in scope
+  `x_335329_capplan` / "Capacity Planner", client_callable=false, active=true, correct
+  names/api_names/type. Saving succeeded → no syntax error (SN compile-checks SI on save). PASS.
+- Probe trigger cleanup `delete_record` on sys_trigger was DENIED by the auto-mode classifier
+  (out-of-task shared-resource action). Left in place — it is an expired one-shot and harmless.
+
+### Focused self-review (in lieu of functional smoke)
+- **3-query bootstrap:** confirmed — exactly 3 bulk GlideRecord(Secure) queries (projects,
+  allocations, headcount) + 2 trivial reference reads (team, area). Allocations & headcount each
+  single-pass populate their maps; no per-project/per-team queries (no N+1). Matches §15.
+- **GlideRecordSecure:** used for project + allocation reads in getBootstrap and for all
+  allocation reads/writes/deletes in saveAllocation/removeTeamFromProject/validateTeamForProject.
+  Headcount & team & area are reference reads via plain GlideRecord (read-only, .user-readable).
+- **Role re-check:** `_canEdit()` (gs.hasRole planner) gates saveAllocation, saveAllocations,
+  removeTeamFromProject — returns {ok:false,error:'insufficient_role'} when absent. Read-only
+  getBootstrap/validateTeamForProject correctly do NOT gate (read ACL handles them).
+- **fte==0 delete:** saveAllocation rounds fte, and when result===0 deletes the existing row
+  (deleteRecord, GlideRecordSecure) returning {ok:true,deleted:true}; no-op if no row exists.
+- **Export 3-dataset shape:** getExportData returns {ok, sheet1{name,rows}, sheet2{name,rows},
+  sheet3{name,rows}} with sheet names "Soft & Hard Planning (2)" / "Capacity vs Headcount" /
+  "Change Log"; sheet1 header matches §11 verbatim; values rendered as LABELS.
+
+### Deviations / notes
+- `access` set to "public" (All application scopes) rather than "package private". Rationale:
+  the widget server script (Phase 7) and a future Scripted REST API (§3.1) call the service;
+  public scoped access is the safe, conventional choice and does not affect client_callable=false.
+  Flag for Phase 7 review if the team prefers package-private.
+- §11 "Dependency" column has no backing field in the §6 data model → emitted as blank string
+  (column position preserved so the header/row arity matches §11 exactly).
+- ATF (Phase 8) is the real verification gate for the server layer on this PDI: T01 bootstrap,
+  T02 save/upsert/delete, T03 validation, T08 export header — all map directly to these methods.
+
+### Repo source saved
+- C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\src\script_includes\CapacityPlannerService.js
+- C:\Users\PLEITE\OneDrive - Unit4\Documents\Scripts\ServiceNowApps\SNCapacityPlanner\src\script_includes\CapacityPlannerSeedData.js
