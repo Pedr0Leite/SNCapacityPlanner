@@ -231,3 +231,27 @@ Build suite **Capacity Planner Regression** with tests:
 - [ ] Seed reconciliation passed; re-run produces zero duplicates.
 - [ ] ATF suite green; no errors in syslog (source = app scope) during a full manual regression pass.
 - [ ] Global update set contains only §5.2 artifacts; app contains everything else; both exported to Git.
+
+---
+
+## Phase 9 — Definition of Done review (§18) — automated-build assessment
+
+Status key: done/verified · BUILT(needs operator UI run) · SPEC(specified for operator) · MCP(pending reconnect)
+
+- BUILT **Five views functionally equivalent to prototype** — widget fully ported & structurally verified (no getElementById, no inline onclick, 67 HTML-escapes, delegated listeners, canEdit gating, $element-scoped DOM). Side-by-side browser check = operator (MANUAL_STEPS §6) after seed + ACLs.
+- BUILT **Cell edits persist across sessions; last-write-wins** — server saveAllocation upsert + optimistic UI + reload-persist path built; browser confirm = operator.
+- SPEC **Role matrix enforced** — ACL matrix specified (MANUAL_STEPS §3, needs security_admin UI); BR aborts already verified live; runtime proof = ATF T05/T06.
+- BUILT **Export workbook, 3 sheets** — client SheetJS + server getExportData (3 datasets, §11 headers); T08 asserts header exactness; Excel open = operator.
+- BUILT **Seed reconciliation; zero-dup re-run** — seed_2026.json independently validated locally (projects 99, alloc fte 386.75, headcount 438, months valid ints, teams canonical); idempotent loader built; instance load + reconcile = operator (MANUAL_STEPS §4).
+- MCP/BUILT **ATF suite green; no app-scope syslog errors** — T01–T08 step scripts authored (src/atf/); record creation pending MCP; run = operator (MANUAL_STEPS §7).
+- MCP **Global update set contains only §5.2 artifacts; both exported to Git** — only SheetJS UI Script intentionally global; scoped artifacts captured by app package; complete + XML export to /update-sets/ pending MCP reconnect.
+
+### Remaining to fully close
+1. (MCP) Create ATF suite + 8 tests from src/atf/.
+2. (MCP) Complete global update set, export XML to /update-sets/, confirm it holds only the SheetJS UI Script; export/publish app v1.0.0.
+3. (Operator UI) MANUAL_STEPS §1–§4, §6–§7.
+
+### Environment constraints encountered (immovable, not defects)
+- MCP integration user -> HTTP 403 on protected system tables (sys_dictionary, sys_index, sys_security_acl): forces auditing, indexes, ACLs to UI.
+- PDI ad-hoc job scheduler never executes MCP-scheduled sys_trigger jobs (confirmed 6x): forces seed run + ATF run to a UI session.
+- MCP SSE session dropped during a session-limit pause: blocks remaining instance writes until /mcp reconnect.
