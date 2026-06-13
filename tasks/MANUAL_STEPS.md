@@ -272,3 +272,58 @@ this PDI's background scheduler does not execute ad-hoc jobs.
 **Run + record:**
 - [ ] Run the suite from the ATF runner; all 8 should be green.
 - [ ] Paste the PASS/FAIL result into `tasks/todo.md` Phase 8 verification block.
+
+---
+
+### 7.1 Build status (updated 2026-06-13 — ATF records created via MCP)
+
+The **suite, all 8 tests, and the 8 suite→test links were created via MCP** and are
+confirmed present in scope **Capacity Planner (`x_335329_capplan`)**. What remains for
+the operator is **only the step(s) on each test** — `sys_atf_test_step` is **blocked on
+this PDI for the integration user** (Table API `create`/`query` both return HTTP 400, and
+the background-script fallback can't run because ad-hoc `sys_trigger` jobs are never
+claimed here — same constraint logged for Phases 2–6). So **0 steps exist**; every test
+currently has an empty step list.
+
+**Created records (sys_ids):**
+
+| Record | sys_id |
+|---|---|
+| Suite "Capacity Planner Regression" | `8c01510c47ad4f10654c57f1d16d4389` |
+| T01 Service bootstrap | `1501d10c47ad4f10654c57f1d16d4359` |
+| T02 Save cell upsert | `bd01d10c47ad4f10654c57f1d16d43ee` |
+| T03 Validation | `ca01d10c47ad4f10654c57f1d16d43f9` |
+| T04 Duplicate guard | `5e01150c47ad4f10654c57f1d16d4336` |
+| T05 ACL user role | `b601910c47ad4f10654c57f1d16d4382` |
+| T06 ACL planner | `be01150c47ad4f10654c57f1d16d43bc` |
+| T07 Seed idempotency | `c701150c47ad4f10654c57f1d16d43f9` |
+| T08 Export data | `a301550c47ad4f10654c57f1d16d431d` |
+
+**Operator: add the step(s) to each test in the UI** (Studio → Automated Test Framework →
+the test → **Test Steps → Add Test Step**). Step config = **"Run Server Side Script"**
+(Step environment = Server). Paste the matching `src/atf/T0n_*.js` body **verbatim** into
+the **Script** field of the step. Per-test:
+
+| Test | Steps to add (in order) | Script body to paste |
+|---|---|---|
+| T01 | 1. Run Server Side Script | `src/atf/T01_bootstrap.js` |
+| T02 | 1. Run Server Side Script | `src/atf/T02_save_cell_upsert.js` |
+| T03 | 1. Run Server Side Script | `src/atf/T03_validation.js` |
+| T04 | 1. Run Server Side Script | `src/atf/T04_duplicate_guard.js` |
+| T05 | 1. **Impersonate** `capplan_user_test` → 2. Run Server Side Script | `src/atf/T05_acl_user.js` |
+| T06 | 1. **Impersonate** `capplan_planner_test` → 2. Run Server Side Script | `src/atf/T06_acl_planner.js` |
+| T07 | 1. Run Server Side Script | `src/atf/T07_seed_idempotency.js` |
+| T08 | 1. Run Server Side Script | `src/atf/T08_export_data.js` |
+
+**Status summary: 8/8 tests have NO step yet — all 8 need the script pasted in the UI.**
+T05/T06 additionally need the preceding Impersonate step. The 5 server-script-only tests
+(T01–T04, T08) need exactly one step each; T07 needs one step; T05/T06 need two each.
+
+**Test-user prerequisite (BLOCKER for T05/T06):** the two impersonation users
+**do NOT exist yet** (verified 2026-06-13: `sys_user` query for
+`capplan_user_test`,`capplan_planner_test` → 0 rows). The operator must create:
+- `capplan_user_test` — granted **ONLY** `x_335329_capplan.user`
+- `capplan_planner_test` — granted **ONLY** `x_335329_capplan.planner`
+
+Create the users first, then point each Impersonate step at the matching user.
+(T01–T04, T07, T08 do not need these users and can be pasted/run independently.)
