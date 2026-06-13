@@ -3,11 +3,23 @@
 Snapshot: 2026-06-13. Instance `dev295018`, scope `x_335329_capplan`, portal
 `https://dev295018.service-now.com/cp`.
 
-**Why the portal looked empty:** the project/allocation/headcount tables were
-empty (the seed never ran — the PDI's background-job scheduler doesn't execute
-ad-hoc jobs via MCP). Data is now being loaded directly via REST. As of this
-snapshot: **areas 10, teams 10, projects 99, headcount 120, allocations 560/779**.
-A second, independent blocker (ACLs) is described in P1-2 below.
+## RESOLVED (2026-06-13)
+- **All-white `/cp` page** — ROOT CAUSE: the `cp` portal (`sp_portal`
+  `373a2ebf47950f10654c57f1d16d4334`) had **no theme** (`theme` empty). A Service
+  Portal with no theme cannot bootstrap its AngularJS shell → blank white page.
+  **FIX:** set `theme` = **Coral** (`281507c44317d210ca4c1f425db8f2fd`), the same
+  theme the stock `/sp` portal uses. Homepage (`cap_planner`) + widget wiring were
+  already correct. **Reload `/cp` with a hard refresh (Ctrl+Shift+R).**
+- **Empty data** — all 5 tables now fully loaded: areas 10, teams 10, projects 99,
+  headcount 120, **allocations 779/779** (FTE sum 386.75 ✓). The widget client
+  controller on the instance was also verified byte-identical to source (only code
+  comments stripped) — not corrupted.
+
+---
+
+**Original note (historical):** the portal looked empty because tables were empty
+(seed never ran) AND the portal had no theme. Both now resolved. A separate
+non-admin blocker (ACLs) is described in P1-2 below.
 
 Current data state to confirm before/after fixes (run in Scripts - Background, scope = Capacity Planner):
 ```javascript
