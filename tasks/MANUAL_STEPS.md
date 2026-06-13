@@ -248,3 +248,27 @@ list + Definition of Done §18.
 > Note: the portal header height in `style.scss` is `calc(100vh - 50px)`. If the
 > `/cp` portal uses a taller/shorter header the bottom of the widget may clip or
 > leave a gap — adjust the 50px in the widget CSS if needed (cosmetic only).
+
+## 7. Phase 8 — ATF suite "Capacity Planner Regression" (spec §14)
+
+The 8 test step scripts are authored in `src/atf/` (see `src/atf/README.md` for
+the per-test composition table). ATF records are built in Studio and the suite is
+**run from the browser ATF runner** — ATF cannot run via the MCP Table API, and
+this PDI's background scheduler does not execute ad-hoc jobs.
+
+**Enable + prereqs:**
+- [ ] Set property **`sn_atf.runner.enabled = true`** (sub-prod only — never on prod).
+- [ ] Seed loaded (§4) and ACL matrix created (§3) first — T01–T04/T07/T08 need data; T05/T06 assert ACLs.
+- [ ] Create 2 test users: `capplan_user_test` (ONLY `x_335329_capplan.user`) and
+      `capplan_planner_test` (ONLY `x_335329_capplan.planner`).
+
+**Build (Studio → Automated Test Framework, scope = Capacity Planner):**
+- [ ] Create Test Suite **"Capacity Planner Regression"**.
+- [ ] Create tests T01–T08; for each, add a **Run Server Side Script** step and paste
+      the matching `src/atf/T0n_*.js` body verbatim. T05/T06 get a preceding
+      **Impersonate** step (the test user named in the file header).
+- [ ] Add all 8 tests to the suite.
+
+**Run + record:**
+- [ ] Run the suite from the ATF runner; all 8 should be green.
+- [ ] Paste the PASS/FAIL result into `tasks/todo.md` Phase 8 verification block.
