@@ -4,6 +4,16 @@ Snapshot: 2026-06-13. Instance `dev295018`, scope `x_335329_capplan`, portal
 `https://dev295018.service-now.com/cp`.
 
 ## RESOLVED (2026-06-13)
+- **`[$injector:modulerr]` for `sn.$sp` → blank portal (after theme fix)** — ROOT
+  CAUSE: the widget dependency `sp_dependency` "Capacity Planner SheetJS"
+  (`742a2abf47950f10654c57f1d16d4318`) had its **Angular `module` field set to
+  `capPlannerSheetJS`**. That makes SP add `capPlannerSheetJS` as a required
+  AngularJS module of the `sn.$sp` app, but SheetJS (`xlsx.full.min.js`) is a plain
+  library that never defines that module → AngularJS `modulerr` → the whole portal
+  app fails to bootstrap → blank page with the console error. **FIX:** cleared the
+  `module` field (plain JS-library includes must NOT declare an Angular module).
+  The JS Include still loads on the page (`page_load=true`), so `XLSX` is still
+  available for the Excel export. **Hard-refresh `/cp`.**
 - **All-white `/cp` page** — ROOT CAUSE: the `cp` portal (`sp_portal`
   `373a2ebf47950f10654c57f1d16d4334`) had **no theme** (`theme` empty). A Service
   Portal with no theme cannot bootstrap its AngularJS shell → blank white page.
